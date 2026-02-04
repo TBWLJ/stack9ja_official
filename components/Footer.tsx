@@ -85,10 +85,10 @@ export default function App() {
             <h6
               className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
               <img src="cp.png" className='w-4' alt="" />
-              ConnectPro
+              Stack9Ja
             </h6>
             <p>
-              ConnectPro Apps Limited is an IT firm that develops and
+              Stack9Ja is an IT firm that develops and
               deploys Technology platforms and solutions that make life
               easier, and work smarter.
             </p>
@@ -97,7 +97,7 @@ export default function App() {
           <div className="">
             <h6
               className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              ConnectPro App
+              Stack9ja App
             </h6>
             <Link href="https://panelly.name.ng/">
             <p className="mb-4">
@@ -222,7 +222,7 @@ export default function App() {
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="/"
-        >Connectpro Apps Limited</a>
+        >Stack9Ja Limited</a>
       </div>
     </footer>
   );

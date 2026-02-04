@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
             <div className="flex shrink-0 items-center gap-2">
               <img src="cp.png" alt="Logo" className="h-8 w-auto" />
               <span className="font-semibold text-gray-900 tracking-tight">
-                YourBrand
+                Stack9Ja
               </span>
             </div>
 
