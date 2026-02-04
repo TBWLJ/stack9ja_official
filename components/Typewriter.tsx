@@ -6,7 +6,7 @@ const TypeError = () => {
   return (
     <section id='back' className='flex items-center'>
         <div className='pl-10 pr-10 text-center'>
-        <h1 className='xl:text-4xl lg:text-4xl md:text-5xl sm:text-4xl text-2xl text-yellow-400 font-extrabold'>
+        <h1 className='xl:text-4xl lg:text-4xl md:text-5xl sm:text-4xl text-2xl text-green-400 font-extrabold'>
         WE DELIVER{' '}
         <span style={{ color: 'white', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}

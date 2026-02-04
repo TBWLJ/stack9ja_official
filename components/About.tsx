@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <section className="bg-blue-900 w-full pb-16 px-6 sm:px-12">
+    <section className="bg-green-900 w-full pb-16 px-6 sm:px-12">
       {/* Intro Section */}
       <div
         className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 pt-16 max-w-7xl mx-auto"
@@ -38,7 +38,7 @@ const About = () => {
           { title: "Our Impact", subtitle: "", link: "/solution" },
         ].map((btn, idx) => (
           <Link key={idx} href={btn.link}>
-            <div className="bg-white w-52 h-52 rounded-full flex flex-col justify-center items-center text-center font-bold text-xl transition transform hover:scale-105 hover:bg-blue-400 hover:border-yellow-500 border-2 border-blue-600 shadow-lg">
+            <div className="bg-white w-52 h-52 rounded-full flex flex-col justify-center items-center text-center font-bold text-xl transition transform hover:scale-105 hover:bg-green-400 hover:border-yellow-500 border-2 border-green-600 shadow-lg">
               <span>{btn.title}</span>
               {btn.subtitle && <span className="text-base font-normal">{btn.subtitle}</span>}
             </div>

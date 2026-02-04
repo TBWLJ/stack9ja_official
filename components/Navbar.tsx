@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <DisclosureButton className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <DisclosureButton className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500">
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="block h-6 w-6 data-open:hidden" />
               <XMarkIcon className="hidden h-6 w-6 data-open:block" />
@@ -62,9 +62,9 @@ const Navbar: React.FC = () => {
                   aria-current={item.current ? "page" : undefined}
                   className={classNames(
                     item.current
-                      ? "text-blue-600"
-                      : "text-gray-700 hover:text-blue-600",
-                    "relative px-3 py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+                      ? "text-green-600"
+                      : "text-gray-700 hover:text-green-600",
+                    "relative px-3 py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-600 after:transition-all hover:after:w-full"
                   )}
                 >
                   {item.name}
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="relative rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="relative rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <span className="sr-only">View notifications</span>
               <BellIcon className="h-6 w-6" />
@@ -86,14 +86,14 @@ const Navbar: React.FC = () => {
             {/* CTA Button */}
             <a
               href="/contact"
-              className="hidden sm:inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
+              className="hidden sm:inline-flex items-center rounded-xl bg-green-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-700 transition-colors"
             >
               Get Started
             </a>
 
             {/* Profile dropdown */}
             <Menu as="div" className="relative">
-              <MenuButton className="flex rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <MenuButton className="flex rounded-full focus:outline-none focus:ring-2 focus:ring-green-500">
                 <span className="sr-only">Open user menu</span>
                 <img
                   src="cp.png"
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
               href={item.href}
               className={classNames(
                 item.current
-                  ? "bg-blue-50 text-blue-600"
+                  ? "bg-green-50 text-green-600"
                   : "text-gray-700 hover:bg-gray-100",
                 "block rounded-lg px-3 py-2 text-base font-medium"
               )}
@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
 
           <a
             href="/contact"
-            className="block rounded-lg bg-blue-600 px-3 py-2 text-center font-semibold text-white hover:bg-blue-700"
+            className="block rounded-lg bg-green-600 px-3 py-2 text-center font-semibold text-white hover:bg-green-700"
           >
             Get Started
           </a>

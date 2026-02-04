@@ -48,7 +48,7 @@ const Solutionn = () => {
               href={solution.anchor}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300"
+              className="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors duration-300"
             >
               {solution.linkText}
             </a>
