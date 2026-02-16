@@ -7,8 +7,6 @@ import { useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
-console.log(process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
-
 export default function AuditPage() {
   const [loading, setLoading] = useState(false);
 
