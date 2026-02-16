@@ -20,7 +20,7 @@ const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
   { name: "Company", href: "/company", current: false },
   { name: "Solutions", href: "/solution", current: false },
-//   { name: "Resources", href: "/resources", current: false },
+  { name: "Audit", href: "/audit", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 

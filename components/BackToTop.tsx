@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import { FaArrowUp } from "react-icons/fa"; // Install react-icons if not already
+import { FaArrowUp } from "react-icons/fa";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
