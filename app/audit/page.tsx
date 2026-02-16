@@ -7,6 +7,8 @@ import { useState } from "react";
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
+console.log(process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID);
+
 export default function AuditPage() {
   const [loading, setLoading] = useState(false);
 
@@ -25,26 +27,33 @@ export default function AuditPage() {
     setLoading(true);
 
     try {
-      await addDoc(collection(db, "audits"), {
-        fullName,
-        companyName,
-        email,
-        phone,
-        challenge,
-        createdAt: serverTimestamp(),
-      });
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Request timeout")), 10000)
+      );
+
+      await Promise.race([
+        addDoc(collection(db, "audits"), {
+          fullName,
+          companyName,
+          email,
+          phone,
+          challenge,
+          createdAt: serverTimestamp(),
+        }),
+        timeoutPromise,
+      ]);
 
       alert("Request received. We will contact you shortly.");
 
-      // Reset form
       setFullName("");
       setCompanyName("");
       setEmail("");
       setPhone("");
       setChallenge("");
-    } catch (error) {
-      console.error("Firestore error:", error);
-      alert("Failed to submit. Please try again.");
+
+    } catch (error: any) {
+      console.error(error);
+      alert(error.message || "Submission failed");
     }
 
     setLoading(false);
