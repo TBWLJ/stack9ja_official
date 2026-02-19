@@ -66,7 +66,7 @@ export default function AuditPage() {
         {/* HERO */}
         <section className="max-w-5xl mx-auto px-6 py-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Your business is losing money —
+            Your business is losing money,
             <br />
             you just can’t see where.
           </h1>
