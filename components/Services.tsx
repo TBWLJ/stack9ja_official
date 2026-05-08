@@ -33,28 +33,32 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-28 bg-gray-50">
-      <div className="text-center mb-16" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our Core Services</h2>
+    <section className="bg-white px-5 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto mb-14 max-w-3xl text-center" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">What we do</p>
+        <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">Premium delivery across the digital stack.</h2>
+        <p className="mt-5 text-lg leading-8 text-slate-600">
+          Every engagement is planned around your users, business goals, security needs, and future maintenance.
+        </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`flex flex-col p-6 rounded-xl shadow-lg bg-linear-to-br ${service.color} text-center transform transition duration-300 hover:scale-105`}
+            className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-slate-200/80"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration={1500 + index * 200} // stagger animations
           >
             <img
-              src={service.image}
+              src={`/${service.image}`}
               alt={service.title}
-              className="mx-auto h-44 w-auto object-contain mb-6"
+              className="mb-6 h-36 w-full object-contain"
               loading="lazy"
             />
-            <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-            <p className="text-gray-700 text-base">{service.description}</p>
+            <h3 className="mb-3 text-xl font-black text-slate-950">{service.title}</h3>
+            <p className="text-base leading-7 text-slate-600">{service.description}</p>
           </div>
         ))}
       </div>

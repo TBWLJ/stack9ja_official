@@ -3,47 +3,60 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <section className="bg-green-900 w-full pb-16 px-6 sm:px-12">
-      {/* Intro Section */}
-      <div
-        className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 pt-16 max-w-7xl mx-auto"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      >
-        <div className="shrink-0">
-          <img src="cp.png" alt="ConnectPro Logo" className="w-24 sm:w-28 md:w-32" loading="lazy" />
-        </div>
-        <div className="text-white md:w-7/12 w-full leading-relaxed text-center md:text-left">
-          <h1 className="text-lg sm:text-xl md:text-2xl">
-            Stack9ja is an IT firm that develops and deploys technology platforms and solutions
-            that make life easier and work smarter.
-          </h1>
-          <p className="mt-4 text-gray-200">
-            Our leading technological transformations have impacted lives across various landscapes within the continent.
+    <section className="bg-white px-5 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Who we are</p>
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">
+            A technology partner built around confidence, not guesswork.
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            Stack9Ja develops and deploys practical technology platforms for organizations that need dependable execution, thoughtful design, and long-term support after launch.
           </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {[
+              ['Strategy', 'Clear scope before development starts.'],
+              ['Delivery', 'Modern engineering with milestone visibility.'],
+              ['Support', 'Guidance that continues after handoff.'],
+            ].map(([title, text]) => (
+              <div key={title} className="rounded-lg border border-slate-200 bg-slate-50 p-5">
+                <h3 className="font-bold text-slate-950">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Action Links / Buttons */}
-      <div
-        className="flex flex-wrap justify-center md:justify-evenly gap-8 mt-16"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      >
-        {[
-          { title: "About Us", subtitle: "Who we are", link: "/company" },
-          { title: "Why work with us", subtitle: "", link: "/company#why" },
-          { title: "Our Impact", subtitle: "", link: "/solution" },
-        ].map((btn, idx) => (
-          <Link key={idx} href={btn.link}>
-            <div className="bg-white w-52 h-52 rounded-full flex flex-col justify-center items-center text-center font-bold text-xl transition transform hover:scale-105 hover:bg-green-400 hover:border-yellow-500 border-2 border-green-600 shadow-lg">
-              <span>{btn.title}</span>
-              {btn.subtitle && <span className="text-base font-normal">{btn.subtitle}</span>}
+        <div className="rounded-xl border border-emerald-950/10 bg-emerald-950 p-6 text-white shadow-2xl shadow-emerald-950/20">
+          <div className="flex items-center gap-4 border-b border-white/10 pb-6">
+            <img src="/cp.png" alt="Stack9Ja logo" className="h-14 w-auto rounded-lg bg-white p-2" loading="lazy" />
+            <div>
+              <p className="text-sm text-emerald-200">Operating principle</p>
+              <h3 className="text-2xl font-black">Excellence with accountability</h3>
             </div>
-          </Link>
-        ))}
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {[
+              ['7+', 'client and product brands supported'],
+              ['4', 'core product engineering services'],
+              ['24h', 'typical first response window'],
+              ['Africa', 'solutions designed for local realities'],
+            ].map(([value, label]) => (
+              <div key={value} className="rounded-lg bg-white/10 p-5">
+                <p className="text-3xl font-black text-emerald-300">{value}</p>
+                <p className="mt-1 text-sm leading-6 text-slate-200">{label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/company" className="rounded-lg bg-white px-5 py-3 text-sm font-bold text-emerald-950 transition hover:bg-emerald-50">
+              Learn about us
+            </Link>
+            <Link href="/company#why" className="rounded-lg border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+              Why teams choose us
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

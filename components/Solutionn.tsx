@@ -23,32 +23,38 @@ const Solutionn = () => {
   ];
 
   return (
-    <section className="py-28 bg-gray-50">
-      <div className="text-center mb-16" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Our Solutions</h2>
+    <section className="bg-slate-50 px-5 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto mb-14 max-w-3xl text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Product experience</p>
+        <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-5xl">Solutions with real business use cases.</h2>
+        <p className="mt-5 text-lg leading-8 text-slate-600">
+          From client portals to commerce, our products are designed to simplify operations and create dependable customer experiences.
+        </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 flex flex-wrap justify-center gap-10">
+      <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
         {solutions.map((solution, index) => (
           <div
             key={index}
-            className="w-full sm:w-96 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transform transition duration-300 hover:scale-105"
+            className="group flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/80"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration={1500 + index * 200}
           >
-            <img
-              src={solution.imgSrc}
-              alt={solution.imgAlt}
-              className="h-20 w-20 object-contain mb-5 transition-transform duration-300 hover:scale-125"
-            />
-            <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
-            <p className="text-gray-700 text-base mb-6">{solution.description}</p>
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-lg bg-emerald-50 ring-1 ring-emerald-900/10">
+              <img
+                src={`/${solution.imgSrc}`}
+                alt={solution.imgAlt}
+                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110"
+              />
+            </div>
+            <h3 className="text-2xl font-black text-slate-950">{solution.title}</h3>
+            <p className="mt-4 flex-1 text-base leading-7 text-slate-600">{solution.description}</p>
             <a
               href={solution.anchor}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-colors duration-300"
+              className="mt-8 inline-flex w-fit rounded-lg bg-emerald-700 px-5 py-3 font-bold text-white transition-colors duration-300 hover:bg-emerald-800"
             >
               {solution.linkText}
             </a>

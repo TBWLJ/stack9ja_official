@@ -8,37 +8,37 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     title:
-      "The team went above and beyond to ensure my issue was resolved quickly and efficiently. Truly outstanding!",
+      "Stack9Ja gave us clear direction from the first conversation and delivered a product our users could understand immediately.",
     client: "Precious",
-    clientInfo: "Project Manager",
+    clientInfo: "Project lead",
     img: "icon.png",
   },
   {
     title:
-      "It has broadened my horizons and helped me advance my career. The community is incredibly supportive.",
+      "The process felt organized and transparent. We always knew what was being built, why it mattered, and what was coming next.",
     client: "Reuben",
-    clientInfo: "Farmer",
+    clientInfo: "Business owner",
     img: "afric.png",
   },
 ];
 
 function TestimonialCard({ title, client, clientInfo, img }: Testimonial) {
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white/70 backdrop-blur-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-      <p className="text-lg font-semibold text-gray-900 mb-6 leading-relaxed">
+    <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg">
+      <p className="mb-6 text-lg font-semibold leading-relaxed text-slate-900">
         “{title}”
       </p>
 
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="font-semibold text-gray-900">{client}</p>
-          <p className="text-sm text-gray-500">{clientInfo}</p>
+          <p className="font-semibold text-slate-950">{client}</p>
+          <p className="text-sm text-slate-500">{clientInfo}</p>
         </div>
 
         <img
-          src={img}
+          src={`/${img}`}
           alt={client}
-          className="h-12 w-12 rounded-full object-contain border border-gray-200"
+          className="h-12 w-12 rounded-full border border-slate-200 object-contain"
         />
       </div>
     </div>
@@ -47,41 +47,37 @@ function TestimonialCard({ title, client, clientInfo, img }: Testimonial) {
 
 export default function Testimony() {
   return (
-    <section className="px-6 py-16 lg:py-28 bg-linear-to-b from-white to-gray-50">
+    <section className="bg-white px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
         <div className="mb-12 max-w-3xl">
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
-            What our community is saying
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Proof of care</p>
+          <h2 className="mb-4 mt-4 text-3xl font-black tracking-tight text-slate-950 lg:text-5xl">
+            Clients should feel informed before, during, and after launch.
           </h2>
-          <p className="text-gray-600 text-base lg:text-lg">
-            From life-enhancing products to outstanding support and real impact,
-            hear directly from people who use our platform every day.
+          <p className="text-base leading-8 text-slate-600 lg:text-lg">
+            We build trust through realistic scopes, direct communication, reliable delivery, and products that are easy to maintain.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 mb-12">
           {testimonials.map((item, idx) => (
             <TestimonialCard key={idx} {...item} />
           ))}
         </div>
 
-        {/* Highlight Testimonial */}
-        <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-blue-50 p-8 lg:p-12 text-center">
-          <p className="text-xl lg:text-2xl font-bold text-gray-900 leading-snug max-w-4xl mx-auto mb-6">
-            “Its intuitive design and powerful features make it indispensable. I
-            can’t imagine going back to life before it!”
+        <div className="relative overflow-hidden rounded-xl border border-emerald-900/10 bg-emerald-950 p-8 text-center text-white lg:p-12">
+          <p className="mx-auto mb-6 max-w-4xl text-xl font-black leading-snug lg:text-3xl">
+            We treat every project like a business asset: planned carefully, built responsibly, and supported after launch.
           </p>
 
           <div className="flex flex-col items-center gap-3">
             <img
-              src="shop4mi-icon.png"
-              alt="Success"
-              className="h-16 w-16 object-contain grayscale"
+              src="/shop4mi-icon.png"
+              alt="Shop4Mi"
+              className="h-16 w-16 rounded-lg bg-white p-2 object-contain"
             />
-            <p className="font-semibold text-gray-900">Success</p>
-            <p className="text-sm text-gray-500">Trader</p>
+            <p className="font-semibold text-white">Stack9Ja delivery standard</p>
+            <p className="text-sm text-emerald-200">Clarity, quality, accountability</p>
           </div>
         </div>
       </div>
