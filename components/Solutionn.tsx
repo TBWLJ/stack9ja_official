@@ -35,7 +35,7 @@ const Solutionn = () => {
         "ListingJet helps businesses create campaign pages, marketing assets, social content, audience exposure, and lead generation systems from a single listing upload, all without needing to write code.",
       imgSrc: "icon.png",
       imgAlt: "ListingJet Logo",
-      linkText: "Visit Store",
+      linkText: "Visit Site",
       anchor: "https://listingjet.name.ng",
     },
   ];
