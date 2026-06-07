@@ -20,6 +20,24 @@ const Solutionn = () => {
       linkText: "Visit Shop",
       anchor: "https://shop4mi.com.ng",
     },
+    {
+      title: "Mivelo",
+      description:
+        "A location-based ecommerce and delivery marketplace for Benin Republic, with open-city testing support for Nigeria and other locations while keeping XOF and Benin-first commerce defaults",
+      imgSrc: "mivelo.png",
+      imgAlt: "Mivelo Logo",
+      linkText: "Visit Store",
+      anchor: "https://mivelo.name.ng",
+    },
+    {
+      title: "ListingJet",
+      description:
+        "ListingJet helps businesses create campaign pages, marketing assets, social content, audience exposure, and lead generation systems from a single listing upload, all without needing to write code.",
+      imgSrc: "icon.png",
+      imgAlt: "ListingJet Logo",
+      linkText: "Visit Store",
+      anchor: "https://listingjet.name.ng",
+    },
   ];
 
   return (
