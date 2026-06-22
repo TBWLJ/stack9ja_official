@@ -58,6 +58,8 @@ const Navbar: React.FC = () => {
                   key={item.name}
                   href={item.href}
                   aria-current={item.current ? "page" : undefined}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className={classNames(
                     item.current
                       ? "text-emerald-700"
