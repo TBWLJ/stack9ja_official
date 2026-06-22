@@ -15,10 +15,11 @@ type NavigationItem = {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
-  { name: "Company", href: "/company", current: false },
-  { name: "Solutions", href: "/solution", current: false },
-  { name: "Audit", href: "/audit", current: false },
-  { name: "Contact", href: "/contact", current: false },
+  { name: "Kiosk-Link", href: "/", current: false },
+  { name: "Panelly", href: "https://panelly.name.ng", current: false },
+  { name: "Finswitz", href: "https://finswitz.com", current: false },
+  { name: "ListingJet", href: "https://listingjet.name.ng", current: false },
+  { name: "Mivelo", href: "https://mivelo.name.ng", current: false },
 ];
 
 function classNames(...classes: Array<string | false | null | undefined>): string {
@@ -32,7 +33,7 @@ const Navbar: React.FC = () => {
       className="sticky top-0 z-50 border-b border-emerald-950/10 bg-white/90 backdrop-blur-xl"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative flex h-[4.5rem] items-center justify-between">
+        <div className="relative flex h-18 items-center justify-between">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <DisclosureButton className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
@@ -45,9 +46,9 @@ const Navbar: React.FC = () => {
           {/* Left: Logo + Links */}
           <div className="flex flex-1 items-center justify-center sm:justify-start gap-10">
             <div className="flex shrink-0 items-center gap-2">
-              <img src="/cp.png" alt="Stack9Ja logo" className="h-9 w-auto" />
+              <img src="/beito.png" alt="Stack9Ja logo" className="h-9 w-auto" />
               <span className="font-semibold text-slate-950 tracking-tight">
-                Stack9Ja
+                Beitora
               </span>
             </div>
 
@@ -76,7 +77,7 @@ const Navbar: React.FC = () => {
               href="/contact"
               className="hidden sm:inline-flex items-center rounded-lg bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-emerald-900/20 transition-colors hover:bg-emerald-800"
             >
-              Book a consultation
+              Contact
             </a>
           </div>
         </div>

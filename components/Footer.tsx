@@ -1,75 +1,155 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from "next/link";
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 const productLinks = [
-  { label: 'Panelly', href: 'https://panelly.name.ng/' },
-  { label: 'Shop4Mi', href: 'https://shop4mi.com.ng/' },
-  { label: 'Titos Corner', href: 'https://titoscorner.vercel.app/' },
-  { label: 'Samaday Properties', href: 'https://samaday.com.ng/' },
+  { label: "Panelly", href: "https://panelly.name.ng" },
+  { label: "Finswitz", href: "https://finswitz.com" },
+  { label: "ListingJet", href: "https://listingjet.name.ng" },
+  { label: "Mivelo", href: "https://mivelo.name.ng" },
 ];
 
-const siteLinks = [
-  { label: 'Company', href: '/company' },
-  { label: 'Solutions', href: '/solution' },
-  { label: 'Audit', href: '/audit' },
-  { label: 'Contact', href: '/contact' },
-];
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-slate-600">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr] lg:px-8">
-        <div>
-          <div className="flex items-center gap-3">
-            <img src="/cp.png" className="h-10 w-auto" alt="Stack9Ja logo" />
-            <span className="text-lg font-black text-slate-950">Stack9Ja</span>
-          </div>
-          <p className="mt-5 max-w-sm leading-7">
-            We design and develop dependable technology platforms that help teams work smarter, launch faster, and serve customers with confidence.
-          </p>
-          <div className="mt-6 inline-flex rounded-full bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-800">
-            With Godliness and Excellence
-          </div>
-        </div>
+    <footer className="border-t border-emerald-950/10 bg-linear-to-b from-white to-emerald-50/40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* CTA */}
+        <div className="py-12">
+          <div className="rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-950">
+                  Let's build something remarkable.
+                </h2>
+                <p className="mt-2 text-slate-600">
+                  We help businesses launch reliable digital products with
+                  speed, clarity, and excellence.
+                </p>
+              </div>
 
-        <div>
-          <h3 className="text-sm font-black uppercase tracking-[0.16em] text-slate-950">Products</h3>
-          <div className="mt-5 space-y-3">
-            {productLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="block transition hover:text-emerald-700">
-                {link.label}
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-xl bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
+              >
+                Start a Project
               </Link>
-            ))}
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-sm font-black uppercase tracking-[0.16em] text-slate-950">Company</h3>
-          <div className="mt-5 space-y-3">
-            {siteLinks.map((link) => (
-              <Link key={link.label} href={link.href} className="block transition hover:text-emerald-700">
-                {link.label}
-              </Link>
-            ))}
+        {/* Main Footer */}
+        <div className="grid gap-12 py-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-3">
+              <img
+                src="/beito.png"
+                alt="Beitora"
+                className="h-10 w-auto"
+              />
+
+              <span className="text-xl font-semibold tracking-tight text-slate-950">
+                Beitora
+              </span>
+            </div>
+
+            <p className="mt-5 max-w-sm leading-7 text-slate-600">
+              Building dependable technology products that help teams work
+              smarter, grow faster, and serve customers better.
+            </p>
+
+            <div className="mt-6 inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-800">
+              With Godliness & Excellence
+            </div>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">
+              Products
+            </h3>
+
+            <div className="mt-5 space-y-3">
+              {productLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-slate-600 transition hover:text-emerald-700"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Company */}
+          {/* <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">
+              Company
+            </h3>
+
+            <div className="mt-5 space-y-3">
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block text-slate-600 transition hover:text-emerald-700"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div> */}
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-950">
+              Contact
+            </h3>
+
+            <div className="mt-5 space-y-4 text-slate-600">
+              <div className="flex items-start gap-3">
+                <MapPinIcon className="h-5 w-5 text-emerald-700" />
+                <span>Ogbomoso, Oyo State, Nigeria</span>
+              </div>
+
+              <a
+                href="mailto:hello@beitora.com"
+                className="flex items-center gap-3 transition hover:text-emerald-700"
+              >
+                <EnvelopeIcon className="h-5 w-5 text-emerald-700" />
+                hello@beitora.com
+              </a>
+
+              <a
+                href="tel:+2348120940814"
+                className="flex items-center gap-3 transition hover:text-emerald-700"
+              >
+                <PhoneIcon className="h-5 w-5 text-emerald-700" />
+                +234 812 094 0814
+              </a>
+            </div>
           </div>
         </div>
 
-        <div>
-          <h3 className="text-sm font-black uppercase tracking-[0.16em] text-slate-950">Contact</h3>
-          <div className="mt-5 space-y-3 leading-7">
-            <p>Ogbomoso, Oyo State, Nigeria</p>
-            <a className="block transition hover:text-emerald-700" href="mailto:info@cpal.com">
-              info@cpal.com
-            </a>
-            <a className="block transition hover:text-emerald-700" href="tel:+2348120940814">
-              +234 812 094 0814
-            </a>
+        {/* Bottom */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200 py-6 text-sm text-slate-500 md:flex-row">
+          <p>© 2026 Beitora. All rights reserved.</p>
+
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="hover:text-emerald-700">
+              Privacy
+            </Link>
+
+            <Link href="/terms" className="hover:text-emerald-700">
+              Terms
+            </Link>
           </div>
         </div>
-      </div>
-
-      <div className="border-t border-slate-200 px-5 py-6 text-center text-sm text-slate-500">
-        © 2026 Stack9Ja Limited. Built for dependable digital transformation.
       </div>
     </footer>
   );

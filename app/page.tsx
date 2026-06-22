@@ -1,14 +1,15 @@
 import React from 'react'
 import TypeError from '../components/Typewriter'
-import About from '../components/About'
+import Mivelo from '../components/Mivelo'
 import Motto from '../components/Motto'
-import Solutionn from '../components/Solutionn'
+import Finswitz from '../components/Finswitz'
 import Partner from '../components/Partner'
-import Services from '../components/Services'
+import Panelly from '../components/Panelly'
 import Testimony from '../components/Testimony'
 import Booking from '../components/Booking'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Device from "../components/Device"
 import { FaWhatsapp } from 'react-icons/fa';
 import BackToTop from '../components/BackToTop'
 
@@ -18,11 +19,12 @@ const Home = () => {
         <Navbar />
         <Motto/>
         <TypeError />
-        <About />
-        <Solutionn />
-        <Services />
-        <Partner />
-        <Testimony />
+        <Device />
+        <Mivelo />
+        <Finswitz />
+        <Panelly />
+        {/* <Partner /> */}
+        {/* <Testimony /> */}
         <Booking />
         <Footer />
         <div className="landing-page">

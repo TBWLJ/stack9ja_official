@@ -14,25 +14,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Stack9Ja — Custom Software, Web & Mobile Solutions",
+    default: "Beitora — Get your Kiosk-Link Band.",
     template: "%s | Stack9ja",
   },
   description:
-    "Stack9Ja builds custom software, websites, mobile apps, cloud solutions, and secure digital products for businesses and organizations. We help you scale with modern technology.",
+    "Beitora is a Kiosk-Link Band that provides secure, contactless access control for businesses and organizations. With Beitora, you can easily manage access to your facilities, events, and more.",
   keywords: [
-    "custom software development",
-    "web development",
-    "mobile app development",
-    "cloud solutions",
-    "business software",
-    "IT consulting",
-    "digital transformation",
-    "software company in Nigeria",
-    "Software company in Ogbomoso",
+    "Beitora",
+    "Kiosk-Link Band",
+    "Access Control",
+    "Finswitz",
+    "Mivelo",
+    "Panelly",
+    "Fintech",
+    "Ecommerce",
+    "Client Portal",
+    "Payment Infrastructure",
+    "Secure Access",
+    "Contactless Access",
+    "Event Management",
+    "Facility Management",
   ],
-  authors: [{ name: "Stack9Ja" }],
-  creator: "Stack9Ja",
-  publisher: "Stack9Ja",
+  authors: [{ name: "Beitora" }],
+  creator: "Beitora",
+  publisher: "Beitora",
   robots: {
     index: true,
     follow: true,
@@ -45,9 +50,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "YourBrand — Custom Software, Web & Mobile Solutions",
+    title: "Beitora — Get your Kiosk-Link Band.",
     description:
-      "We build custom software, websites, mobile apps, and cloud solutions to help businesses grow faster and smarter.",
+    "Beitora is a Kiosk-Link Band that provides secure, contactless access control for businesses and organizations. With Beitora, you can easily manage access to your facilities, events, and more.",
     url: "https://stack9ja.com.ng",
     siteName: "Stack9Ja",
     images: [
@@ -63,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stack9Ja — Custom Software, Web & Mobile Solutions",
+    title: "Beitora — Get your Kiosk-Link Band.",
     description:
-      "We build custom software, websites, mobile apps, and cloud solutions to help businesses grow faster and smarter.",
+    "Beitora is a Kiosk-Link Band that provides secure, contactless access control for businesses and organizations. With Beitora, you can easily manage access to your facilities, events, and more.",
     images: ["https://stack9ja.com.ng/og-image.png"],
     creator: "@stack9ja", // optional
   },
