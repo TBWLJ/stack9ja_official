@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
 
 const TypeError = () => {
   return (
@@ -44,7 +43,7 @@ const TypeError = () => {
             </a>
 
             <a
-              href="/solution"
+              href="/"
               className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-6 py-3 text-base font-bold text-white backdrop-blur transition hover:bg-white/15"
             >
               Learn More

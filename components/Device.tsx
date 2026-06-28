@@ -37,7 +37,7 @@ const Device = () => {
                 <div className="mt-8 flex justify-center gap-4">
                     <a
                     href="/shop"
-                    className="rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
+                    className="rounded-full bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
                     >
                     Shop
                     </a>
@@ -58,7 +58,7 @@ const Device = () => {
                     alt="img"
                     className="h-140 w-full object-cover transition duration-700 group-hover:scale-105"
                     src="/band2.png"
-                    width={100}
+                    width={600}
                     height={25}
                 />
                 
@@ -83,7 +83,7 @@ const Device = () => {
                 <div className="mt-8 flex justify-center gap-4">
                     <a
                     href="/shop"
-                    className="rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
+                    className="rounded-full bg-blue-900 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
                     >
                     Shop
                     </a>
